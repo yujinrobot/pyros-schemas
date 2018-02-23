@@ -68,12 +68,11 @@ from pyros_schemas.ros.basic_fields import (
     RosUInt8, RosUInt16, RosUInt32, RosUInt64,
     RosFloat32, RosFloat64,
     RosString, RosTextString,
-    RosTime, RosDuration,
 )
-# from pyros_schemas.ros.time_fields import (
-#     # RosTimeVerbatim,
-#     # RosDurationVerbatim,
-# )
+from pyros_schemas.ros.time_fields import (
+    RosTime, RosTimeVerbatim,
+    RosDuration, RosDurationVerbatim,
+)
 from pyros_schemas.ros.schema import RosSchema
 
 
@@ -605,7 +604,7 @@ class RosMsgTime(RosSchema):
     """
     _valid_ros_msgtype = std_msgs.Time
     _generated_ros_msgtype = std_msgs.Time
-    data = RosTime()
+    data = RosTimeVerbatim()
 
 
 class RosMsgDuration(RosSchema):
@@ -641,7 +640,7 @@ class RosMsgDuration(RosSchema):
     """
     _valid_ros_msgtype = std_msgs.Duration
     _generated_ros_msgtype = std_msgs.Duration
-    data = RosDuration()
+    data = RosDurationVerbatim()
 
 
 class RosMsgHeader(RosSchema):
@@ -676,5 +675,5 @@ class RosMsgHeader(RosSchema):
     _valid_ros_msgtype = std_msgs.Header
     _generated_ros_msgtype = std_msgs.Header
     seq = RosUInt32()
-    stamp = RosTime()
+    stamp = RosTimeVerbatim()
     frame_id = RosTextString()

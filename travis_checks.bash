@@ -29,5 +29,6 @@ if [ "$ROS_FLOW" == "devel" ]; then
 elif [ "$ROS_FLOW" == "install" ]; then
     make -j1 install
     source install/setup.bash
-    python -m pytest pyros_schemas
+    nosetests pyros_msgs
+    python -m nose pyros_msgs
 fi
