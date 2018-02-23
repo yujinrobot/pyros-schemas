@@ -1,3 +1,0 @@
-# for release, version doesnt matter, we always work in virtualenv
-gitchangelog
-twine

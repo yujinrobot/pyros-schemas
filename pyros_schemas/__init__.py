@@ -1,4 +1,5 @@
-from __future__ import absolute_import, print_function
+from __future__ import absolute_import
+from __future__ import print_function
 
 # try:
 #     import std_msgs
@@ -33,8 +34,8 @@ __all__ = [
     'RosUInt8', 'RosUInt16', 'RosUInt32', 'RosUInt64',
     'RosFloat32', 'RosFloat64',
     'RosString', 'RosTextString',
-    'RosTimeVerbatim',
-    'RosDurationVerbatim',
+    'RosTime',
+    'RosDuration',
     'RosOpt',
     'RosNested',
     'RosList',
